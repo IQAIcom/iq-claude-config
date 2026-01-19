@@ -1,11 +1,11 @@
 ---
 name: workflow
-description: Git conventions, commit messages, PR templates, and npm publishing workflows. Use when committing code, creating PRs, or publishing packages.
+description: Git conventions, commit messages, PR templates, tooling (Biome, pnpm, Turborepo), and npm publishing workflows. Use when committing code, creating PRs, setting up tooling, or publishing packages.
 ---
 
 # Workflow Skill
 
-Development workflow, processes, and conventions.
+Development workflow, processes, tooling, and conventions.
 
 ## Related Files
 
@@ -13,6 +13,8 @@ Development workflow, processes, and conventions.
 - [NPM_PUBLISHING.md](./NPM_PUBLISHING.md) - Publishing packages to npm
 - [PR_TEMPLATES.md](./PR_TEMPLATES.md) - Pull request templates
 - [PROJECT_BOOTSTRAP.md](./PROJECT_BOOTSTRAP.md) - Starting new projects
+- [BIOME.md](./BIOME.md) - Linting and formatting with Biome
+- [PACKAGE_MANAGEMENT.md](./PACKAGE_MANAGEMENT.md) - pnpm, bun, and Turborepo
 
 ## Quick Reference
 
