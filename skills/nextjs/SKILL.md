@@ -1,0 +1,41 @@
+# Next.js Skill
+
+Next.js is our primary full-stack framework. Use it for all web applications.
+
+## When to Use
+
+✅ Web applications
+✅ APIs (Server Actions or Route Handlers)
+✅ SSR/SSG content sites
+✅ Full-stack features
+✅ Everything except indexers/heavy background services
+
+## Key Principles
+
+1. **Server Components by default** - Only add 'use client' when needed
+2. **Server Actions for mutations** - Not API routes
+3. **Colocation** - Keep related files together
+4. **Type safety** - Full TypeScript, no `any`
+
+## Related Files
+
+- [FOLDER_STRUCTURE.md](./FOLDER_STRUCTURE.md) - Project organization
+- [SERVER_COMPONENTS.md](./SERVER_COMPONENTS.md) - RSC patterns
+- [SERVER_ACTIONS.md](./SERVER_ACTIONS.md) - Data mutations
+- [DATA_FETCHING.md](./DATA_FETCHING.md) - Fetching and caching
+- [API_ROUTES.md](./API_ROUTES.md) - When to use Route Handlers
+
+## Quick Start
+
+```bash
+npx create-next-app@latest my-app --typescript --tailwind --eslint --app --src-dir
+```
+
+## Stack
+
+- Next.js 14+ (App Router)
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Prisma (database)
+- NextAuth.js (auth)

@@ -1,0 +1,8 @@
+{
+  "name": "iq-claude-config",
+  "version": "1.0.0",
+  "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
+  "author": "IQ Team",
+  "repository": "https://github.com/your-org/iq-claude-config",
+  "keywords": ["nextjs", "nestjs", "prisma", "typescript", "shadcn"]
+}
