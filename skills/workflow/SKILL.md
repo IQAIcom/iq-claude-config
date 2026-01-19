@@ -1,3 +1,8 @@
+---
+name: workflow
+description: Git conventions, commit messages, PR templates, and npm publishing workflows. Use when committing code, creating PRs, or publishing packages.
+---
+
 # Workflow Skill
 
 Development workflow, processes, and conventions.

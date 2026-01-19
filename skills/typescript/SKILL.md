@@ -1,3 +1,8 @@
+---
+name: typescript
+description: TypeScript conventions, strict typing patterns, and best practices. Use when writing TypeScript code, defining types, interfaces, or configuring tsconfig.
+---
+
 # TypeScript Skill
 
 TypeScript conventions and patterns used across all projects.

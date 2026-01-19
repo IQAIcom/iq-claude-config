@@ -1,8 +1,9 @@
 ---
 description: Create an implementation plan for a feature
+argument-hint: <feature description>
 ---
 
-Use the @planner agent to create a detailed implementation plan for the requested feature.
+Create a detailed implementation plan for the requested feature.
 
 Analyze the codebase first to understand existing patterns, then create a comprehensive plan with:
 - Clear requirements

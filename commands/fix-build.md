@@ -1,8 +1,9 @@
 ---
 description: Fix build errors and type issues
+argument-hint: [optional: specific error or file]
 ---
 
-Use the @build-error-resolver agent to fix build errors.
+Fix build errors in this project.
 
 1. Run the build command to identify all errors
 2. Analyze root causes

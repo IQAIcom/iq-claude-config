@@ -1,3 +1,8 @@
+---
+name: database
+description: Prisma ORM patterns, database schema design, and query conventions. Use when working with databases, writing migrations, or defining Prisma schemas.
+---
+
 # Database Skill
 
 Database conventions and patterns using Prisma.

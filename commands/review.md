@@ -1,8 +1,9 @@
 ---
 description: Review code for quality, security, and best practices
+argument-hint: [optional: file path or PR number]
 ---
 
-Use the @code-reviewer agent to review the code.
+Review code for quality, security, and best practices.
 
 If no specific files mentioned, review recent changes:
 ```bash

@@ -1,8 +1,9 @@
 ---
 description: Sync documentation with code changes
+argument-hint: [optional: specific doc or feature]
 ---
 
-Use the @doc-updater agent to update documentation.
+Update documentation to match current code.
 
 1. Identify recent code changes
 2. Find related documentation

@@ -1,3 +1,8 @@
+---
+name: nestjs
+description: NestJS patterns for blockchain indexers, background processing, and compute-intensive services. Use only for indexers, heavy background jobs, or persistent WebSocket services.
+---
+
 # NestJS Skill
 
 NestJS is used **ONLY** for specific use cases where Next.js is not suitable.

@@ -1,3 +1,8 @@
+---
+name: nextjs
+description: Next.js App Router patterns, Server Components, Server Actions, and data fetching. Use when building web applications, APIs, or full-stack features with Next.js.
+---
+
 # Next.js Skill
 
 Next.js is our primary full-stack framework. Use it for all web applications.

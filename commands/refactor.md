@@ -1,8 +1,9 @@
 ---
 description: Clean up and refactor code
+argument-hint: [optional: file or directory to refactor]
 ---
 
-Use the @refactor-cleaner agent to clean up the codebase.
+Clean up and refactor the codebase.
 
 Focus on:
 - Dead code removal

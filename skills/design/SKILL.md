@@ -1,3 +1,8 @@
+---
+name: design
+description: UI design system with Tailwind CSS, Shadcn UI components, and brand guidelines. Use when building UI components, styling, or implementing design patterns.
+---
+
 # Design Skill
 
 Design system and UI component guidelines for consistent, beautiful interfaces.
