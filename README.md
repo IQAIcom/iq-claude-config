@@ -8,7 +8,7 @@ Company-wide Claude Code configuration for consistent development across all pro
 
 ```bash
 # Add to marketplace
-claude plugin marketplace add your-org/iq-claude-config
+claude plugin marketplace add IQAIcom/iq-claude-config
 
 # Install
 claude plugin install iq-claude-config
@@ -17,7 +17,7 @@ claude plugin install iq-claude-config
 ### Manual Installation
 
 ```bash
-git clone https://github.com/your-org/iq-claude-config.git
+git clone https://github.com/IQAIcom/iq-claude-config.git
 cp -r iq-claude-config/* ~/.claude/
 ```
 

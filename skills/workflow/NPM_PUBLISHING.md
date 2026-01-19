@@ -6,7 +6,7 @@
 
 ```json
 {
-  "name": "@your-org/package-name",
+  "name": "@IQAIcom/package-name",
   "version": "1.0.0",
   "description": "Package description",
   "main": "dist/index.js",
@@ -31,7 +31,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/package-name"
+    "url": "https://github.com/IQAIcom/package-name"
   },
   "publishConfig": {
     "access": "public"
@@ -88,7 +88,7 @@ export default defineConfig({
 npm login
 
 # For scoped packages, ensure org exists
-npm org ls your-org
+npm org ls IQAIcom
 ```
 
 ### Versioning
@@ -186,14 +186,14 @@ jobs:
 
 ```bash
 # View package info
-npm info @your-org/package-name
+npm info @IQAIcom/package-name
 
 # View versions
-npm view @your-org/package-name versions
+npm view @IQAIcom/package-name versions
 
 # Deprecate version
-npm deprecate @your-org/package-name@1.0.0 "Use 2.0.0 instead"
+npm deprecate @IQAIcom/package-name@1.0.0 "Use 2.0.0 instead"
 
 # Unpublish (within 72 hours)
-npm unpublish @your-org/package-name@1.0.0
+npm unpublish @IQAIcom/package-name@1.0.0
 ```
