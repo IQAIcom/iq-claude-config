@@ -2,6 +2,30 @@
 
 Custom hooks for extracting and reusing logic across components.
 
+## File Location
+
+All hooks live in `_hooks/` colocated with each page:
+
+```
+app/users/
+├── page.tsx
+├── _components/
+├── _hooks/           ← Hooks here
+│   ├── use-user-filters.ts
+│   └── use-user-selection.ts
+├── _schema.ts
+└── _actions.ts
+```
+
+**Colocation rule:** If a hook is needed in another page, import from the original location:
+
+```tsx
+// In app/dashboard/page.tsx, reusing a hook from users
+import { useUserFilters } from '@/app/users/_hooks/use-user-filters';
+```
+
+Only move to a shared location when used across many unrelated features.
+
 ## Preferred Libraries
 
 | Purpose | Library | When to Use |

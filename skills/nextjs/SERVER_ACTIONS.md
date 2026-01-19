@@ -2,6 +2,28 @@
 
 Server Actions are the primary way to handle data mutations in Next.js. Use them instead of API routes for form submissions and data changes.
 
+## File Location
+
+All server actions live in `_actions.ts` colocated with each page:
+
+```
+app/users/
+├── page.tsx
+├── _components/
+├── _hooks/
+├── _schema.ts
+└── _actions.ts    ← Server actions here
+```
+
+```ts
+// app/users/_actions.ts
+'use server';
+
+import 'server-only';  // Prevents accidental client import
+import { db } from '@/lib/integrations/db';
+import { actionClient } from '@/lib/integrations/safe-action';
+```
+
 ## Preferred: next-safe-action
 
 Use [next-safe-action](https://next-safe-action.dev) for type-safe server actions with built-in validation, error handling, and middleware support.
@@ -9,12 +31,13 @@ Use [next-safe-action](https://next-safe-action.dev) for type-safe server action
 ### Setup
 
 ```bash
-npm install next-safe-action zod
+npm install next-safe-action zod server-only
 ```
 
 ```ts
-// lib/safe-action.ts
+// lib/integrations/safe-action.ts
 import { createSafeActionClient } from 'next-safe-action';
+import { auth } from './auth';
 
 export const actionClient = createSafeActionClient();
 
@@ -34,8 +57,10 @@ export const authActionClient = createSafeActionClient({
 // app/users/_actions.ts
 'use server';
 
+import 'server-only';
 import { z } from 'zod';
-import { actionClient, authActionClient } from '@/lib/safe-action';
+import { db } from '@/lib/integrations/db';
+import { actionClient, authActionClient } from '@/lib/integrations/safe-action';
 import { revalidatePath } from 'next/cache';
 
 const createUserSchema = z.object({

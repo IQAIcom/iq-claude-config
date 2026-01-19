@@ -2,6 +2,31 @@
 
 Server Components are the default in Next.js App Router. Use them unless you need client-side interactivity.
 
+## File Location & Naming
+
+All components live in `_components/` colocated with each page:
+
+```
+app/users/
+├── page.tsx
+├── _components/              ← Components here
+│   ├── user-list.server.tsx  # Server component with Suspense
+│   ├── user-list.loading.tsx # Skeleton/loading state
+│   ├── user-list.tsx         # Client component
+│   └── user-card.tsx         # Simple component (server by default)
+├── _hooks/
+├── _schema.ts
+└── _actions.ts
+```
+
+### Component Naming Convention
+
+| File | Purpose |
+|------|---------|
+| `name.server.tsx` | Server component that fetches data, wraps client in Suspense |
+| `name.loading.tsx` | Skeleton UI shown during suspense |
+| `name.tsx` | Client component with interactivity (or simple server component) |
+
 ## When to Use Server vs Client
 
 ### Server Components (default)

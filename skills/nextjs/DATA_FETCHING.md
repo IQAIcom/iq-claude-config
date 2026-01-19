@@ -1,12 +1,55 @@
 # Data Fetching
 
+## File Location
+
+Data fetching functions live in `_actions.ts` colocated with each page:
+
+```
+app/users/
+├── page.tsx
+├── _components/
+├── _hooks/
+├── _schema.ts
+└── _actions.ts    ← Data fetching functions here
+```
+
+```ts
+// app/users/_actions.ts
+'use server';
+
+import 'server-only';
+import { db } from '@/lib/integrations/db';
+
+export async function getUsers() {
+  return db.user.findMany({
+    orderBy: { createdAt: 'desc' },
+  });
+}
+
+export async function getUserById(id: string) {
+  return db.user.findUnique({ where: { id } });
+}
+```
+
 ## Fetching in Server Components
 
-### Direct Database Access
+### Using _actions.ts Functions
 
 ```tsx
 // app/users/page.tsx
-import { db } from '@/lib/db';
+import { getUsers } from './_actions';
+
+async function UsersPage() {
+  const users = await getUsers();
+  return <UserList users={users} />;
+}
+```
+
+### Direct Database Access (simple cases)
+
+```tsx
+// app/users/page.tsx
+import { db } from '@/lib/integrations/db';
 
 async function UsersPage() {
   const users = await db.user.findMany({
@@ -156,15 +199,18 @@ export default function Loading() {
 
 ## Data Fetching Patterns
 
-### Create reusable data functions
+### Colocated data functions (preferred)
 
 ```tsx
-// lib/data/users.ts
-import { db } from '@/lib/db';
+// app/users/_actions.ts
+'use server';
+
+import 'server-only';
+import { db } from '@/lib/integrations/db';
 import { cache } from 'react';
 
 // Deduplicated within a single render
-export const getUser = cache(async (id: string) => {
+export const getUserById = cache(async (id: string) => {
   return db.user.findUnique({ where: { id } });
 });
 
@@ -175,16 +221,17 @@ export async function getUsers() {
 }
 ```
 
-### Use in components
+### Use in page components
 
 ```tsx
 // app/users/[id]/page.tsx
-import { getUser } from '@/lib/data/users';
+import { getUserById } from '../_actions';
+import { notFound } from 'next/navigation';
 
 async function UserPage({ params }: { params: { id: string } }) {
-  const user = await getUser(params.id);
+  const user = await getUserById(params.id);
   if (!user) notFound();
-  
+
   return <UserProfile user={user} />;
 }
 ```
