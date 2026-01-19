@@ -25,10 +25,11 @@ Next.js is our primary full-stack framework. Use it for all web applications.
 ## Related Files
 
 - [FOLDER_STRUCTURE.md](./FOLDER_STRUCTURE.md) - Project organization
-- [SERVER_COMPONENTS.md](./SERVER_COMPONENTS.md) - RSC patterns
+- [SERVER_COMPONENTS.md](./SERVER_COMPONENTS.md) - RSC patterns and component structure
 - [SERVER_ACTIONS.md](./SERVER_ACTIONS.md) - Data mutations
 - [DATA_FETCHING.md](./DATA_FETCHING.md) - Fetching and caching
 - [API_ROUTES.md](./API_ROUTES.md) - When to use Route Handlers
+- [HOOKS.md](./HOOKS.md) - Custom hooks and TanStack Query patterns
 
 ## Quick Start
 

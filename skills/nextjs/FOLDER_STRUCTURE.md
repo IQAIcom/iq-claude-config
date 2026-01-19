@@ -66,18 +66,68 @@ src/
 ### Private Folders `_folder`
 - Not accessible via routing
 - For internal components within app/
+- Use underscore prefix for co-located page resources
 
-### Colocation
-Keep related files together:
+### Page Co-location Pattern
+Keep related files together within each page:
 ```
 app/users/
 ├── page.tsx           # Route
 ├── loading.tsx        # Loading UI
 ├── error.tsx          # Error UI
-├── actions.ts         # Server actions for this route
-└── components/        # Route-specific components
-    └── user-table.tsx
+├── _actions.ts        # Server actions for this route
+├── _components/       # Page-specific UI components
+│   ├── user-table.tsx
+│   └── user-filters.tsx
+├── _hooks/            # Page-specific custom hooks
+│   └── use-user-filters.ts
+└── _schema/           # Zod schemas and TypeScript types
+    └── user-filters.ts
 ```
+
+### Component Naming Conventions
+```
+ComponentName.tsx          # Default (can be server or client)
+ComponentName.server.tsx   # Explicit server component
+ComponentName.loading.tsx  # Loading state component
+ComponentName.error.tsx    # Error state component
+```
+
+- Name by functionality, not appearance (`UserActions` not `BlueButtons`)
+- Group related variants with consistent naming
+- Keep files under 500 lines - split if larger
+
+### Feature Organization
+For complex features, use nested directories:
+```
+app/dashboard/
+├── page.tsx
+├── layout.tsx              # Shared UI elements
+├── analytics/
+│   ├── page.tsx
+│   ├── _components/
+│   └── _hooks/
+└── settings/
+    ├── page.tsx
+    ├── _components/
+    └── _actions.ts
+```
+
+### Internationalization
+```
+src/
+├── messages/
+│   ├── en.json
+│   └── es.json
+└── app/
+    └── [locale]/
+        └── page.tsx
+```
+
+- Wrap user-facing text in translation functions
+- Store translations in `src/messages/{locale}.json`
+- Keep translation keys organized by feature/page
+- Update all language files when adding text
 
 ### File Naming
 
@@ -95,9 +145,22 @@ app/users/
 |-----------|----------|
 | Pages | `app/**/page.tsx` |
 | Layouts | `app/**/layout.tsx` |
-| Server Actions | `actions/` or colocated |
+| Server Actions | `app/**/_actions.ts` (colocated) or `actions/` |
+| Page-specific components | `app/**/_components/` |
+| Page-specific hooks | `app/**/_hooks/` |
+| Page-specific schemas | `app/**/_schema/` |
 | Shared components | `components/` |
-| Route-specific components | `app/**/components/` |
+| UI primitives | `components/ui/` (Shadcn) |
+| Shared business components | `components/shared/` |
+| Icons | `components/icons/` |
 | Database queries | `lib/db/` or in actions |
 | Validation schemas | `lib/validations/` |
 | Types | `types/` or colocated |
+
+## Code Organization Principles
+
+1. **Prefer co-location over centralization** - Keep related code close in the file tree
+2. **Maintain consistent patterns** - Same structure at each nesting level
+3. **Split over grow** - Split complex components rather than creating large files
+4. **Explicit naming** - Use descriptive names over abbreviations
+5. **Single responsibility** - One component/hook = one job

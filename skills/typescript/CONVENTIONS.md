@@ -1,5 +1,22 @@
 # TypeScript Conventions
 
+## Code Style Principles
+
+### Readability First
+- Easy to understand at a glance
+- Explicit over implicit - descriptive code over clever tricks
+- Consistent patterns for similar functionality
+
+### Modular Design
+- Break complex features into composable pieces
+- Avoid repetition through composition and abstraction
+- Single responsibility - one function/class = one job
+
+### Simplicity
+- Prefer the simplest solution that works
+- Don't over-engineer or add unnecessary abstractions
+- Three similar lines is better than a premature abstraction
+
 ## Configuration
 
 ### tsconfig.json (Next.js)

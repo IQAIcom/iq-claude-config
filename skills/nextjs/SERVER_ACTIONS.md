@@ -2,9 +2,134 @@
 
 Server Actions are the primary way to handle data mutations in Next.js. Use them instead of API routes for form submissions and data changes.
 
-## Defining Server Actions
+## Preferred: next-safe-action
 
-### In a separate file (recommended)
+Use [next-safe-action](https://next-safe-action.dev) for type-safe server actions with built-in validation, error handling, and middleware support.
+
+### Setup
+
+```bash
+npm install next-safe-action zod
+```
+
+```ts
+// lib/safe-action.ts
+import { createSafeActionClient } from 'next-safe-action';
+
+export const actionClient = createSafeActionClient();
+
+// With auth middleware
+export const authActionClient = createSafeActionClient({
+  middleware: async () => {
+    const session = await auth();
+    if (!session) throw new Error('Unauthorized');
+    return { userId: session.user.id };
+  },
+});
+```
+
+### Defining Actions
+
+```ts
+// app/users/_actions.ts
+'use server';
+
+import { z } from 'zod';
+import { actionClient, authActionClient } from '@/lib/safe-action';
+import { revalidatePath } from 'next/cache';
+
+const createUserSchema = z.object({
+  name: z.string().min(1),
+  email: z.string().email(),
+});
+
+export const createUser = authActionClient
+  .schema(createUserSchema)
+  .action(async ({ parsedInput, ctx }) => {
+    const user = await db.user.create({
+      data: {
+        ...parsedInput,
+        createdBy: ctx.userId,
+      },
+    });
+
+    revalidatePath('/users');
+    return { user };
+  });
+
+export const deleteUser = authActionClient
+  .schema(z.object({ id: z.string() }))
+  .action(async ({ parsedInput, ctx }) => {
+    await db.user.delete({ where: { id: parsedInput.id } });
+    revalidatePath('/users');
+    return { success: true };
+  });
+```
+
+### Using in Components
+
+```tsx
+'use client';
+
+import { useAction } from 'next-safe-action/hooks';
+import { createUser } from './_actions';
+
+export function CreateUserForm() {
+  const { execute, result, status } = useAction(createUser);
+
+  return (
+    <form action={(formData) => execute({
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+    })}>
+      <input name="name" required />
+      <input name="email" type="email" required />
+
+      {result.validationErrors && (
+        <p className="text-red-500">{result.validationErrors.name?.[0]}</p>
+      )}
+
+      {result.serverError && (
+        <p className="text-red-500">{result.serverError}</p>
+      )}
+
+      <button disabled={status === 'executing'}>
+        {status === 'executing' ? 'Creating...' : 'Create'}
+      </button>
+    </form>
+  );
+}
+```
+
+### With Optimistic Updates
+
+```tsx
+'use client';
+
+import { useOptimisticAction } from 'next-safe-action/hooks';
+import { toggleLike } from './_actions';
+
+export function LikeButton({ postId, initialLiked }) {
+  const { execute, optimisticState } = useOptimisticAction(toggleLike, {
+    currentState: { liked: initialLiked },
+    updateFn: (state) => ({ liked: !state.liked }),
+  });
+
+  return (
+    <button onClick={() => execute({ postId })}>
+      {optimisticState.liked ? '❤️' : '🤍'}
+    </button>
+  );
+}
+```
+
+---
+
+## Manual Approach (without next-safe-action)
+
+For simpler cases or learning purposes:
+
+### In a separate file
 
 ```tsx
 // actions/user.ts
