@@ -1,6 +1,7 @@
 ---
 name: typescript
 description: TypeScript conventions, strict typing patterns, and best practices. Use when writing TypeScript code, defining types, interfaces, or configuring tsconfig.
+allowed-tools: Read, Grep, Glob, Edit, Write, Bash(npx:tsc*)
 ---
 
 # TypeScript Skill

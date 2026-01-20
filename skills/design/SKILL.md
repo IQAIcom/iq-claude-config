@@ -1,6 +1,7 @@
 ---
 name: design
 description: UI design system with Tailwind CSS, Shadcn UI components, and brand guidelines. Use when building UI components, styling, or implementing design patterns.
+allowed-tools: Read, Grep, Glob, Edit, Write, Bash(npx:shadcn*)
 ---
 
 # Design Skill
@@ -24,12 +25,12 @@ Design system and UI component guidelines for consistent, beautiful interfaces.
 
 ```bash
 # Initialize Shadcn
-npx shadcn-ui@latest init
+npx shadcn@latest init
 
 # Add components
-npx shadcn-ui@latest add button
-npx shadcn-ui@latest add card
-npx shadcn-ui@latest add input
+npx shadcn@latest add button
+npx shadcn@latest add card
+npx shadcn@latest add input
 ```
 
 ## Principles

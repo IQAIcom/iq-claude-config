@@ -35,6 +35,12 @@ This folder contains company-wide development knowledge and best practices.
 ### Data
 - **[database/](./database/SKILL.md)** - Prisma patterns and schema conventions
 
+### Testing
+- **[testing/](./testing/SKILL.md)** - Vitest, Testing Library, Playwright
+
+### Automation
+- **[agent-browser/](./agent-browser/SKILL.md)** - Browser automation for testing and scraping
+
 ### Process
 - **[workflow/](./workflow/SKILL.md)** - Git, NPM publishing, PR templates
 - **[typescript/](./typescript/SKILL.md)** - TypeScript conventions
@@ -47,5 +53,7 @@ This folder contains company-wide development knowledge and best practices.
 | Blockchain indexer | nestjs/ |
 | UI components | design/ |
 | Database schema | database/ |
+| Writing tests | testing/ |
+| Browser automation | agent-browser/ |
 | Publishing package | workflow/NPM_PUBLISHING.md |
 | Commit message | workflow/GIT_CONVENTIONS.md |

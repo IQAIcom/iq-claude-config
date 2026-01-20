@@ -1,6 +1,7 @@
 ---
 name: workflow
 description: Git conventions, commit messages, PR templates, tooling (Biome, pnpm, Turborepo), and npm publishing workflows. Use when committing code, creating PRs, setting up tooling, or publishing packages.
+allowed-tools: Read, Grep, Glob, Edit, Write, Bash(git:*, npm:*, pnpm:*, bun:*, npx:*, gh:*)
 ---
 
 # Workflow Skill

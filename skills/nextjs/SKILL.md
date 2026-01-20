@@ -1,6 +1,7 @@
 ---
 name: nextjs
 description: Next.js App Router patterns, Server Components, Server Actions, and data fetching. Use when building web applications, APIs, or full-stack features with Next.js.
+allowed-tools: Read, Grep, Glob, Edit, Write, Bash(npm:*, npx:*, pnpm:*, bun:*)
 ---
 
 # Next.js Skill
@@ -39,7 +40,7 @@ npx create-next-app@latest my-app --typescript --tailwind --eslint --app --src-d
 
 ## Stack
 
-- Next.js 14+ (App Router)
+- Next.js 15+ (App Router)
 - TypeScript
 - Tailwind CSS
 - Shadcn UI
