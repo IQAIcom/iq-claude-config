@@ -35,7 +35,13 @@ Next.js is our primary full-stack framework. Use it for all web applications.
 ## Quick Start
 
 ```bash
-npx create-next-app@latest my-app --typescript --tailwind --eslint --app --src-dir
+# Creates Next.js app with Tailwind + Shadcn pre-configured
+npx shadcn@latest init my-app
+cd my-app
+
+# Then add Biome and common packages
+npm install -D @biomejs/biome && npx biome init
+npx shadcn@latest add button card input form toast
 ```
 
 ## Stack
@@ -45,4 +51,4 @@ npx create-next-app@latest my-app --typescript --tailwind --eslint --app --src-d
 - Tailwind CSS
 - Shadcn UI
 - Prisma (database)
-- NextAuth.js (auth)
+- @everipedia/iq-login (auth)

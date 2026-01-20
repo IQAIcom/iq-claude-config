@@ -35,6 +35,9 @@ This folder contains company-wide development knowledge and best practices.
 ### Data
 - **[database/](./database/SKILL.md)** - Prisma patterns and schema conventions
 
+### Auth
+- **[auth/](./auth/SKILL.md)** - IQ Login for Web3 authentication
+
 ### Testing
 - **[testing/](./testing/SKILL.md)** - Vitest, Testing Library, Playwright
 
@@ -53,6 +56,7 @@ This folder contains company-wide development knowledge and best practices.
 | Blockchain indexer | nestjs/ |
 | UI components | design/ |
 | Database schema | database/ |
+| Authentication | auth/ |
 | Writing tests | testing/ |
 | Browser automation | agent-browser/ |
 | Publishing package | workflow/NPM_PUBLISHING.md |
