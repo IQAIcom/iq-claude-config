@@ -12,24 +12,24 @@ IQ Gateway (`iq-ext-api`) is BrainDAO's centralized proxy service for managing e
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│              BrainDAO Application                    │
-│  (iq.wiki, iqgpt, iqai, dashboard, etc.)           │
+│              BrainDAO Application                   │
+│  (iq.wiki, iqgpt, iqai, dashboard, etc.)            │
 └─────────────────────────────────────────────────────┘
                         │
                         ▼ (x-api-key header)
 ┌─────────────────────────────────────────────────────┐
-│                  IQ Gateway                          │
+│                  IQ Gateway                         │
 │              gateway.braindao.org                   │
-│  • Auth validation                                   │
-│  • API key injection                                 │
+│  • Auth validation                                  │
+│  • API key injection                                │
 │  • Caching (optional)                               │
 │  • Logging & analytics                              │
 └─────────────────────────────────────────────────────┘
                         │
                         ▼ (auto-injected API keys)
 ┌─────────────────────────────────────────────────────┐
-│           External APIs                              │
-│  CoinMarketCap, CoinGecko, Etherscan, Fraxscan     │
+│           External APIs                             │
+│  CoinMarketCap, CoinGecko, Etherscan, Fraxscan      │
 └─────────────────────────────────────────────────────┘
 ```
 
