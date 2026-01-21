@@ -38,6 +38,9 @@ This folder contains company-wide development knowledge and best practices.
 ### Auth
 - **[auth/](./auth/SKILL.md)** - IQ Login for Web3 authentication
 
+### Infrastructure
+- **[iq-gateway/](./iq-gateway/SKILL.md)** - Centralized proxy for external APIs (CMC, CoinGecko, Etherscan)
+
 ### Testing
 - **[testing/](./testing/SKILL.md)** - Vitest, Testing Library, Playwright
 
@@ -57,6 +60,7 @@ This folder contains company-wide development knowledge and best practices.
 | UI components | design/ |
 | Database schema | database/ |
 | Authentication | auth/ |
+| External APIs (CMC, CG) | iq-gateway/ |
 | Writing tests | testing/ |
 | Browser automation | agent-browser/ |
 | Publishing package | workflow/NPM_PUBLISHING.md |
