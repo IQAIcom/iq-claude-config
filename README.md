@@ -6,19 +6,36 @@ Company-wide Claude Code configuration for consistent development across all pro
 
 ### As Plugin (Recommended)
 
-```bash
-# Add to marketplace
-claude plugin marketplace add IQAIcom/iq-claude-config
+Run these commands inside a Claude Code session (these are slash commands, not terminal commands):
 
-# Install
-claude plugin install iq-claude-config
+```
+/plugin marketplace add IQAIcom/iq-claude-config
+/plugin install iq-claude-config@iq-claude-config
 ```
 
-### Manual Installation
+When prompted, choose your installation scope:
+- **User scope** - Available in all your projects
+- **Project scope** - Shared with collaborators on this repo
+- **Local scope** - Only for you, in this repo only
 
-```bash
-git clone https://github.com/IQAIcom/iq-claude-config.git
-cp -r iq-claude-config/* ~/.claude/
+### Verify Installation
+
+```
+/plugin
+```
+
+Navigate to the "Installed" tab to see the plugin and its components.
+
+### Update Plugin
+
+```
+/plugin marketplace update iq-claude-config
+```
+
+### Uninstall
+
+```
+/plugin uninstall iq-claude-config@iq-claude-config
 ```
 
 ## What's Included
