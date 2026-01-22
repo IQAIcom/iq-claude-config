@@ -1,7 +1,7 @@
 {
   "name": "iq-claude-config",
   "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "IQ Team",
     "email": "dev@iq.wiki"
