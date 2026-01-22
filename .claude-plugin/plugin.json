@@ -8,8 +8,8 @@
   },
   "repository": "https://github.com/IQAIcom/iq-claude-config",
   "keywords": ["nextjs", "nestjs", "prisma", "typescript", "shadcn"],
-  "commands": "../commands/",
-  "agents": "../agents/",
-  "skills": "../skills/",
-  "hooks": "../hooks/hooks.json"
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
 }
