@@ -6,23 +6,38 @@
   },
   "metadata": {
     "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
-    "version": "1.0.1"
+    "version": "1.0.2"
   },
   "plugins": [
     {
       "name": "iq-claude-config",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/IQAIcom/iq-claude-config.git"
-      },
       "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
-      "version": "1.0.1",
-      "author": {
-        "name": "IQ Team"
-      },
-      "repository": "https://github.com/IQAIcom/iq-claude-config",
-      "license": "MIT",
-      "keywords": ["nextjs", "nestjs", "prisma", "typescript", "shadcn"]
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/agent-browser",
+        "./skills/auth",
+        "./skills/database",
+        "./skills/design",
+        "./skills/iq-gateway",
+        "./skills/nestjs",
+        "./skills/nextjs",
+        "./skills/testing",
+        "./skills/typescript",
+        "./skills/workflow"
+      ],
+      "agents": [
+        "./agents"
+      ],
+      "commands": [
+        "./commands"
+      ],
+      "hooks": [
+        "./hooks"
+      ],
+      "rules": [
+        "./rules"
+      ]
     }
   ]
 }
