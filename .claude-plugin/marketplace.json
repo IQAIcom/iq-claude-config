@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
@@ -16,7 +16,7 @@
         "url": "https://github.com/IQAIcom/iq-claude-config.git"
       },
       "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "IQ Team"
       },
