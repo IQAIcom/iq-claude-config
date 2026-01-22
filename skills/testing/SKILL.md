@@ -19,7 +19,6 @@ Testing conventions and patterns for maintaining code quality.
 
 - [VITEST_SETUP.md](./VITEST_SETUP.md) - Vitest configuration and patterns
 - [COMPONENT_TESTING.md](./COMPONENT_TESTING.md) - React Testing Library patterns
-- [E2E_TESTING.md](./E2E_TESTING.md) - Playwright patterns
 
 ## Quick Start
 
