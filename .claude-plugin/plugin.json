@@ -4,12 +4,6 @@
   "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
   "author": {
     "name": "IQ Team",
-    "url": "https://github.com/IQAIcom"
-  },
-  "repository": "https://github.com/IQAIcom/iq-claude-config",
-  "keywords": ["nextjs", "nestjs", "prisma", "typescript", "shadcn"],
-  "commands": "./commands/",
-  "agents": "./agents/",
-  "skills": "./skills/",
-  "hooks": "./hooks/hooks.json"
+    "email": "dev@iq.wiki"
+  }
 }
