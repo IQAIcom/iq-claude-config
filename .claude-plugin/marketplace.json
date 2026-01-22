@@ -11,7 +11,10 @@
   "plugins": [
     {
       "name": "iq-claude-config",
-      "source": ".",
+      "source": {
+        "source": "github",
+        "repo": "IQAIcom/iq-claude-config"
+      },
       "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
       "version": "1.0.0",
       "author": {
