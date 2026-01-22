@@ -1,10 +1,25 @@
 {
-  "name": "IQAIcom-iq-claude-config",
-  "description": "IQ company Claude Code plugins and configuration",
+  "name": "iq-claude-config",
+  "owner": {
+    "name": "IQ Team",
+    "email": "dev@iq.wiki"
+  },
+  "metadata": {
+    "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
+    "version": "1.0.0"
+  },
   "plugins": [
     {
       "name": "iq-claude-config",
-      "path": "."
+      "source": ".",
+      "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
+      "version": "1.0.0",
+      "author": {
+        "name": "IQ Team"
+      },
+      "repository": "https://github.com/IQAIcom/iq-claude-config",
+      "license": "MIT",
+      "keywords": ["nextjs", "nestjs", "prisma", "typescript", "shadcn"]
     }
   ]
 }
