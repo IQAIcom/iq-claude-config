@@ -29,7 +29,10 @@ npm install prisma @prisma/client
 npx prisma init
 
 # After schema changes
-npx prisma migrate dev
+npx prisma db push
+
+# Pull schema from existing DB
+npx prisma db pull
 
 # Generate client
 npx prisma generate
