@@ -1,0 +1,10 @@
+{
+  "name": "IQAIcom-iq-claude-config",
+  "description": "IQ company Claude Code plugins and configuration",
+  "plugins": [
+    {
+      "name": "iq-claude-config",
+      "path": "."
+    }
+  ]
+}
