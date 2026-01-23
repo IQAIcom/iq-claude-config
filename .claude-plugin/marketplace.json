@@ -12,20 +12,11 @@
     {
       "name": "iq-claude-config",
       "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
+      "version": "1.0.3",
       "source": "./",
       "strict": false,
-      "skills": [
-        "./skills/agent-browser",
-        "./skills/auth",
-        "./skills/database",
-        "./skills/design",
-        "./skills/iq-gateway",
-        "./skills/nestjs",
-        "./skills/nextjs",
-        "./skills/testing",
-        "./skills/typescript",
-        "./skills/workflow"
-      ]
+      "commands": "./commands",
+      "agents": "./agents"
     }
   ]
 }
