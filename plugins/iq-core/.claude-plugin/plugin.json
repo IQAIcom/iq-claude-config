@@ -1,0 +1,9 @@
+{
+  "name": "iq-core",
+  "description": "Core IQ development standards - Next.js, NestJS, TypeScript, and workflow conventions",
+  "version": "1.0.0",
+  "author": {
+    "name": "IQ Team",
+    "email": "dev@iq.wiki"
+  }
+}

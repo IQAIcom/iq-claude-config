@@ -10,13 +10,9 @@
   },
   "plugins": [
     {
-      "name": "iq-claude-config",
-      "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
-      "version": "1.0.3",
-      "source": "./",
-      "strict": false,
-      "commands": "./commands",
-      "agents": "./agents"
+      "name": "iq-core",
+      "description": "Core IQ development standards - Next.js, NestJS, TypeScript, and workflow conventions",
+      "source": "./plugins/iq-core"
     }
   ]
 }
