@@ -38,3 +38,4 @@ This plugin provides the foundational configuration, agents, and skills for IQAI
 
 ## Hooks
 - **Console Log Check**: Warns if `console.log` is left in code.
+- **Secret Scanning**: Detects hardcoded secrets (e.g., API keys) before commit.
