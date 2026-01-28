@@ -309,3 +309,17 @@ const userSchema = z.object({
 // Infer type from schema
 type User = z.infer<typeof userSchema>;
 ```
+
+## Coding Standards
+
+Common coding standards (Naming, Error Handling, File Structure) are defined in the **[software-design](../software-design/SKILL.md)** skill.
+Refer to:
+- [Clean Code Standards](../software-design/CLEAN_CODE.md)
+- [Error Handling Strategy](../software-design/ERROR_HANDLING.md)
+
+## No Debug Code in Commits
+
+- Remove `console.log`
+- Remove `debugger`
+- Remove commented-out code
+- Remove `// TODO` for completed items

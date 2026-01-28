@@ -11,6 +11,8 @@ Development workflow, processes, tooling, and conventions.
 ## Related Files
 
 - [GIT_CONVENTIONS.md](./GIT_CONVENTIONS.md) - Commit, branch, and PR conventions
+- [SECURITY.md](./SECURITY.md) - Security rules and best practices
+- [STACK_SELECTION.md](./STACK_SELECTION.md) - Stack selection guidelines (Next.js vs NestJS)
 - [NPM_PUBLISHING.md](./NPM_PUBLISHING.md) - Publishing packages to npm
 - [PR_TEMPLATES.md](./PR_TEMPLATES.md) - Pull request templates
 - [PROJECT_BOOTSTRAP.md](./PROJECT_BOOTSTRAP.md) - Starting new projects
