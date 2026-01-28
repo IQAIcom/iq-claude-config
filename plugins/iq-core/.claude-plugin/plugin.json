@@ -30,8 +30,8 @@
     "iq-gateway": "./skills/iq-gateway/SKILL.md",
     "nestjs": "./skills/nestjs/SKILL.md",
     "nextjs": "./skills/nextjs/SKILL.md",
-    "testing": "./skills/testing/SKILL.md",
     "software-design": "./skills/software-design/SKILL.md",
+    "testing": "./skills/testing/SKILL.md",
     "typescript": "./skills/typescript/SKILL.md",
     "workflow": "./skills/workflow/SKILL.md"
   },
