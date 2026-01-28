@@ -13,6 +13,8 @@ This plugin provides the foundational configuration, agents, and skills for IQAI
 - `build-error-resolver`: Helper to fix build and type errors.
 - `pr-writer`: Generates PR descriptions.
 - `doc-updater`: Keeps documentation in sync.
+- `e2e-runner`: Runs Playwright E2E tests.
+- `refactor-cleaner`: Identifies and removes dead code.
 
 ### Commands
 - `/plan`: Trigger the planner agent.
@@ -24,10 +26,15 @@ This plugin provides the foundational configuration, agents, and skills for IQAI
 ### Skills
 - **Workflow**: Git conventions, PR templates, NPM publishing.
 - **TypeScript**: Coding standards, best practices.
-- **Next.js / NestJS**: Framework-specific patterns.
-- **Security**: Secret scanning and best practices.
-- **Design**: Brand guidelines and UI patterns.
+- **Next.js**: App Router patterns, Server Components, Actions.
+- **NestJS**: Backend patterns for indexers and services.
+- **Software Design**: Core principles (SOLID, DRY), clean code, error handling.
+- **Testing**: Vitest, React Testing Library, Playwright patterns.
+- **Auth**: Authentication setup and usage.
+- **Database**: Prisma patterns and schema conventions.
+- **Design**: Brand guidelines, Shadcn, Tailwind.
+- **IQ Gateway**: Gateway integration patterns.
+- **Agent Browser**: Browser automation capabilities.
 
 ## Hooks
 - **Console Log Check**: Warns if `console.log` is left in code.
-- **Secret Scanning**: Checks for hardcoded secrets in committed files.
