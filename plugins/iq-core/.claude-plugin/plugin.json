@@ -31,6 +31,7 @@
     "nestjs": "./skills/nestjs/SKILL.md",
     "nextjs": "./skills/nextjs/SKILL.md",
     "testing": "./skills/testing/SKILL.md",
+    "software-design": "./skills/software-design/SKILL.md",
     "typescript": "./skills/typescript/SKILL.md",
     "workflow": "./skills/workflow/SKILL.md"
   },
