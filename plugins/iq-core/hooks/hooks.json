@@ -2,11 +2,15 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "tool == 'Edit' && tool_input.file_path matches '\\.(ts|tsx|js|jsx)$'",
+        "matcher": "(tool == 'Edit' || tool == 'Write') && tool_input.file_path matches '\\.(ts|tsx|js|jsx)$'",
         "hooks": [
           {
             "type": "command",
-            "command": "#!/bin/bash\nif grep -n 'console\\.log' \"$CLAUDE_TOOL_INPUT_FILE_PATH\" 2>/dev/null; then echo '[Hook] Remember to remove console.log before committing' >&2; fi"
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/scripts/check-console.sh"
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/scripts/scan-secrets.sh"
           }
         ]
       }

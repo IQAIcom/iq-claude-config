@@ -1,9 +1,38 @@
 {
   "name": "iq-core",
   "description": "Core IQ development standards - Next.js, NestJS, TypeScript, and workflow conventions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "IQ Team",
     "email": "dev@iq.wiki"
-  }
+  },
+  "commands": {
+    "fix-build": "./commands/fix-build.md",
+    "plan": "./commands/plan.md",
+    "refactor": "./commands/refactor.md",
+    "review": "./commands/review.md",
+    "sync-docs": "./commands/sync-docs.md"
+  },
+  "agents": {
+    "build-error-resolver": "./agents/build-error-resolver.md",
+    "code-reviewer": "./agents/code-reviewer.md",
+    "doc-updater": "./agents/doc-updater.md",
+    "e2e-runner": "./agents/e2e-runner.md",
+    "planner": "./agents/planner.md",
+    "pr-writer": "./agents/pr-writer.md",
+    "refactor-cleaner": "./agents/refactor-cleaner.md"
+  },
+  "skills": {
+    "agent-browser": "./skills/agent-browser/SKILL.md",
+    "auth": "./skills/auth/SKILL.md",
+    "database": "./skills/database/SKILL.md",
+    "design": "./skills/design/SKILL.md",
+    "iq-gateway": "./skills/iq-gateway/SKILL.md",
+    "nestjs": "./skills/nestjs/SKILL.md",
+    "nextjs": "./skills/nextjs/SKILL.md",
+    "testing": "./skills/testing/SKILL.md",
+    "typescript": "./skills/typescript/SKILL.md",
+    "workflow": "./skills/workflow/SKILL.md"
+  },
+  "hooks": "./hooks/hooks.json"
 }
