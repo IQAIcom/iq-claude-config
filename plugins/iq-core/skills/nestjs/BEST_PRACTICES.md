@@ -57,6 +57,8 @@ app.useGlobalPipes(new ValidationPipe({
 
 ## Error Handling
 
+> For general error handling strategies, see [Error Handling](../software-design/ERROR_HANDLING.md).
+
 ### Use built-in exceptions
 
 ```typescript

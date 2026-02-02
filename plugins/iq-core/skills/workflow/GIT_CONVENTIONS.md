@@ -141,6 +141,14 @@ feat(auth): add Google OAuth login (#123)
   - Require status checks
   - No direct pushes
 
+## Don't Commit
+
+- `.env` files (Secrets)
+- `node_modules/` (Dependencies)
+- Build artifacts (`dist/`, `.next/`)
+- IDE settings (unless shared)
+- `console.log` debugging code
+
 ## .gitignore Essentials
 
 ```gitignore
