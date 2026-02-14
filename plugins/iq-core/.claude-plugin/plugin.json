@@ -34,6 +34,5 @@
     "./skills/testing/SKILL.md",
     "./skills/typescript/SKILL.md",
     "./skills/workflow/SKILL.md"
-  ],
-  "hooks": "./hooks/hooks.json"
+  ]
 }
