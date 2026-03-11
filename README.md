@@ -1,32 +1,50 @@
 # IQ Claude Config
 
-Company-wide Claude Code configuration for consistent development across all projects.
+Modular Claude Code plugins for IQ development. Install only what your project needs.
+
+## Plugins
+
+| Plugin | For | Skills |
+|--------|-----|--------|
+| **iq-nextjs** | Next.js full-stack apps | nextjs, design, database, auth, iq-gateway, testing, agent-browser |
+| **iq-nestjs** | NestJS backend/indexers | nestjs, database, testing |
+| **iq-mcps** | MCP server development | mcp-development |
+| **iq-adk-ts** | ADK-TS framework | adk-ts-docs-writer, adk-ts-readme-writer, adk-ts-style-guide |
 
 ## Installation
 
-### As Plugin (Recommended)
-
-Run these commands inside a Claude Code session (these are slash commands, not terminal commands):
+Run these inside a Claude Code session:
 
 ```
 /plugin marketplace add IQAIcom/iq-claude-config
-/plugin install iq-claude-config@iq-claude-config
 ```
 
-When prompted, choose your installation scope:
-- **User scope** - Available in all your projects
-- **Project scope** - Shared with collaborators on this repo
-- **Local scope** - Only for you, in this repo only
-
-### Verify Installation
+Then install the plugin(s) you need:
 
 ```
-/plugin
+/plugin install iq-claude-config@iq-nextjs
+/plugin install iq-claude-config@iq-nestjs
+/plugin install iq-claude-config@iq-mcps
+/plugin install iq-claude-config@iq-adk-ts
 ```
 
-Navigate to the "Installed" tab to see the plugin and its components.
+When prompted, choose your scope:
+- **User scope** — available in all your projects
+- **Project scope** — shared with collaborators
+- **Local scope** — only for you, in this repo
 
-### Update Plugin
+### Which plugins do I need?
+
+| Project Type | Install |
+|---|---|
+| Next.js app | `iq-nextjs` |
+| NestJS indexer | `iq-nestjs` |
+| Turborepo monorepo | `iq-nextjs` + `iq-nestjs` |
+| MCP server | `iq-mcps` |
+| ADK-TS framework | `iq-adk-ts` |
+| TypeScript library | None — use Claude defaults + `CLAUDE.md` |
+
+### Update
 
 ```
 /plugin marketplace update iq-claude-config
@@ -35,56 +53,12 @@ Navigate to the "Installed" tab to see the plugin and its components.
 ### Uninstall
 
 ```
-/plugin uninstall iq-claude-config@iq-claude-config
+/plugin uninstall iq-claude-config@iq-nextjs
 ```
 
-## What's Included
+## Best Practices
 
-### Agents
-Task-specific sub-agents for delegation:
-- `build-error-resolver` - Fixes build/type errors
-- `refactor-cleaner` - Dead code cleanup
-- `doc-updater` - Documentation sync
-- `code-reviewer` - Quality and security review
-- `planner` - Feature implementation planning
-- `pr-writer` - PR description generation
-- `e2e-runner` - Playwright E2E testing
-
-### Commands
-Slash commands for quick actions:
-- `/plan` - Create implementation plan
-- `/review` - Trigger code review
-- `/fix-build` - Fix build errors
-- `/sync-docs` - Sync documentation
-- `/refactor` - Clean up code
-
-### Rules
-Always-active guidelines:
-- `stack-selection` - Default Next.js, NestJS only for indexers
-- `security` - Security best practices
-- `git-conventions` - Commit format, branching
-- `code-quality` - Code standards
-
-### Skills
-Domain knowledge and best practices:
-- `nextjs/` - RSC, Server Actions, folder structure
-- `nestjs/` - Indexer/service patterns
-- `design/` - Shadcn, Tailwind, brand guidelines
-- `database/` - Prisma patterns
-- `workflow/` - Git, NPM publishing, PR templates
-- `typescript/` - Type conventions
-
-## Stack Selection
-
-```
-Default: Next.js (full-stack with server actions)
-
-Use NestJS ONLY when:
-- Building a blockchain indexer
-- Service requires heavy background processing
-- Needs persistent WebSocket connections
-- Compute-intensive operations that would block Next.js
-```
+See [BEST_PRACTICES.md](./BEST_PRACTICES.md) for copy-paste snippets to add to your project's `CLAUDE.md`.
 
 ## Contributing
 
