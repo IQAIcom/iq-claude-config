@@ -35,7 +35,10 @@ npx shadcn@latest add input
 
 ## Principles
 
-1. **Consistency** - Use design tokens, not arbitrary values
-2. **Accessibility** - Proper contrast, keyboard navigation
-3. **Responsiveness** - Mobile-first approach
-4. **Simplicity** - Don't over-design
+- If Shadcn UI or Radix provides a component (modal, dropdown, button, etc.), use it. Never build custom equivalents from scratch. You may wrap or style library components for a custom look, but the underlying primitive must come from the library.
+- Every element must justify its existence. If it has no clear purpose, remove it.
+- Reject generic template-like layouts. If it looks like every other landing page or dashboard, rethink the design.
+- Prefer bespoke layouts, intentional asymmetry, and distinctive typography over safe defaults.
+- Use design tokens, not arbitrary values. No magic numbers for colors, spacing, or font sizes.
+- Focus on micro-interactions, precise spacing, and invisible UX over flashy decoration.
+- Mobile-first. Ensure keyboard navigation and proper contrast.
