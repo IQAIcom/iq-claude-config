@@ -5,14 +5,29 @@
     "email": "dev@iq.wiki"
   },
   "metadata": {
-    "description": "IQ company Claude Code configuration - Next.js, NestJS, and workflow standards",
-    "version": "1.0.3"
+    "description": "IQ company Claude Code plugins - modular standards for Next.js, NestJS, MCP servers, and ADK-TS",
+    "version": "2.0.0"
   },
   "plugins": [
     {
-      "name": "iq-core",
-      "description": "Core IQ development standards - Next.js, NestJS, TypeScript, and workflow conventions",
-      "source": "./plugins/iq-core"
+      "name": "iq-nextjs",
+      "description": "IQ development standards for Next.js full-stack applications",
+      "source": "./plugins/iq-nextjs"
+    },
+    {
+      "name": "iq-nestjs",
+      "description": "IQ development standards for NestJS backend services and indexers",
+      "source": "./plugins/iq-nestjs"
+    },
+    {
+      "name": "iq-mcps",
+      "description": "IQ conventions for building MCP servers",
+      "source": "./plugins/iq-mcps"
+    },
+    {
+      "name": "iq-adk-ts",
+      "description": "ADK-TS framework documentation and content management",
+      "source": "./plugins/iq-adk-ts"
     }
   ]
 }

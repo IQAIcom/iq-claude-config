@@ -1,0 +1,25 @@
+{
+  "name": "iq-adk-ts",
+  "description": "ADK-TS framework documentation, style guide, and content management tools",
+  "version": "1.0.0",
+  "author": {
+    "name": "IQ Team",
+    "email": "dev@iq.wiki"
+  },
+  "skills": [
+    "./skills/adk-ts-docs-writer/SKILL.md",
+    "./skills/adk-ts-readme-writer/SKILL.md",
+    "./skills/adk-ts-style-guide/SKILL.md"
+  ],
+  "agents": [
+    "./agents/docs-freshness-checker.md",
+    "./agents/docs-reviewer.md",
+    "./agents/docs-writer.md",
+    "./agents/mcp-docs-generator.md"
+  ],
+  "commands": [
+    "./commands/adk-ts-changelog.md",
+    "./commands/adk-ts-docs-audit.md",
+    "./commands/adk-ts-starter-sync.md"
+  ]
+}

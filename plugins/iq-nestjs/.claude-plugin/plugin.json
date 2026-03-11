@@ -1,0 +1,14 @@
+{
+  "name": "iq-nestjs",
+  "description": "IQ development standards for NestJS backend services, blockchain indexers, and WebSocket applications",
+  "version": "1.0.0",
+  "author": {
+    "name": "IQ Team",
+    "email": "dev@iq.wiki"
+  },
+  "skills": [
+    "./skills/nestjs/SKILL.md",
+    "./skills/database/SKILL.md",
+    "./skills/testing/SKILL.md"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "iq-mcps",
+  "description": "IQ conventions for building MCP (Model Context Protocol) servers",
+  "version": "1.0.0",
+  "author": {
+    "name": "IQ Team",
+    "email": "dev@iq.wiki"
+  },
+  "skills": [
+    "./skills/mcp-development/SKILL.md"
+  ]
+}
