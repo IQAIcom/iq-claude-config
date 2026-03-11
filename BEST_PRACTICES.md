@@ -7,3 +7,4 @@ Pick what applies to your project. Paste into `CLAUDE.md`.
 - If Shadcn UI or Radix provides a component (modal, dropdown, button, etc.), use it. Never build custom equivalents from scratch — wrap or style the library primitive instead.
 - Every UI element must justify its existence. If it has no clear purpose, remove it.
 - Reject generic template-like layouts. If it looks like every other landing page or dashboard, rethink the design.
+- Focus on micro-interactions, precise spacing, and invisible UX over flashy decoration.
