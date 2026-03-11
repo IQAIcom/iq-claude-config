@@ -8,3 +8,5 @@ Pick what applies to your project. Paste into `CLAUDE.md`.
 - Every UI element must justify its existence. If it has no clear purpose, remove it.
 - Reject generic template-like layouts. If it looks like every other landing page or dashboard, rethink the design.
 - Focus on micro-interactions, precise spacing, and invisible UX over flashy decoration.
+- Reduction is the ultimate sophistication — in code, UI, and architecture. If something can be removed without loss, remove it.
+- Check for existing utilities, helpers, and library components before creating new ones. Do not pollute the codebase with redundant code.
