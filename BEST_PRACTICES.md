@@ -1,89 +1,119 @@
-# IQ Team - CLAUDE.md Best Practices
+# IQ Best Practices
 
-Copy relevant sections into your project's `CLAUDE.md` file. Only include what matters for your project.
+Company coding standards and conventions. Copy relevant sections into your project's `CLAUDE.md`.
 
----
+## Code Quality
 
-## Code Style
-
-```markdown
-## Code Style
-
-- Order methods by abstraction level: caller before callee. Reading top-to-bottom should flow from high-level to low-level.
-- Use `unknown` instead of `any`. If you need a type escape hatch, use a type assertion with a comment explaining why.
-- Prefer interfaces for object shapes, types for unions and primitives.
+### TypeScript
+- Strict mode always. No `any` — use `unknown` if truly unknown.
 - Explicit return types on exported functions.
+- Prefer interfaces for object shapes, types for unions and primitives.
+
+```typescript
+// ❌ Bad
+function process(data: any) {}
+
+// ✅ Good
+function process(data: UserData) {}
+function process(data: unknown) {}
 ```
 
-## TypeScript Strictness
+### Functions
+- Order methods by abstraction: caller before callee (top-to-bottom readability).
+- One function = one job. If you need "and" to describe it, split it.
+- Functions: ~50 lines max. Files: ~300 lines max. Components: ~200 lines max.
 
-```markdown
-## TypeScript
+### Naming
+```typescript
+// Verbs for functions
+function getUserById() {}
+function validateEmail() {}
 
-- Strict mode enabled. No implicit any, no unchecked index access.
-- No `console.log` in production code — use a proper logger or remove after debugging.
-- Prefer `const` assertions and `satisfies` over type annotations where possible.
+// Nouns for variables
+const user = {};
+const isValid = true;
 ```
 
-## Prisma / Database
+### Imports
+Order: external packages → internal aliases (`@/`) → relative imports → types.
 
-```markdown
-## Database
-
-- Use Prisma as the ORM. PostgreSQL in production, SQLite for local dev.
-- Always use transactions for multi-step mutations.
-- Never use raw SQL unless Prisma can't express the query.
-- Run `npx prisma generate` after schema changes.
+```typescript
+import { useState } from 'react';
+import { db } from '@/lib/db';
+import { Button } from './Button';
+import type { User } from '@/types';
 ```
 
-## Testing
+### Comments
+Don't comment obvious code. Explain *why*, not *what*.
 
-```markdown
-## Testing
-
-- Use Vitest for unit/integration tests.
-- Test behavior, not implementation details.
-- Colocate test files next to source: `foo.test.ts` alongside `foo.ts`.
-- Use MSW for mocking API calls, not manual fetch mocks.
+```typescript
+// ❌ counter++;  // Increment counter
+// ✅ const page = index + 1; // API uses 1-based indexing
 ```
 
-## Auth
+### No Debug Code in Commits
+Remove `console.log`, `debugger`, commented-out code, and completed `// TODO`s.
 
-```markdown
-## Auth
+## Error Handling
 
-- Use Privy for authentication (wallet + social login).
-- Legacy projects may use @everipedia/iq-login — do not migrate unless asked.
-- Never use NextAuth.js.
+```typescript
+try {
+  await riskyOperation();
+} catch (error) {
+  logger.error('Operation failed', { error });
+  throw new AppError('Failed to complete operation');
+}
 ```
+
+Use custom error classes:
+```typescript
+class AppError extends Error {
+  constructor(message: string, public code: string) {
+    super(message);
+  }
+}
+```
+
+## Security
+
+- Never hardcode secrets — use `process.env` and `.env.local`.
+- Never commit `.env` files.
+- Always validate user input with Zod.
+- Use Prisma (parameterized queries) — never interpolate user input into raw queries.
+- Check auth on every protected route. Check permissions, not just authentication.
+- Never expose sensitive data (password hashes, internal IDs, tokens) in responses or logs.
+- Mark server-only modules with `import 'server-only'`.
+
+## Stack Selection
+
+**Default: Next.js** for all new projects.
+
+Use NestJS **only** for:
+- Blockchain indexers
+- Heavy background processing
+- Persistent WebSocket services
+- Compute-intensive operations that would block Next.js
+
+When in doubt, start with Next.js.
 
 ## Tooling
 
-```markdown
-## Tooling
-
-- Use Biome for formatting and linting (not ESLint/Prettier).
-- Use pnpm as package manager.
-- Use changesets for versioning in published packages.
-```
-
-## MCP Servers
-
-```markdown
-## MCP Server Conventions
-
-- Package name: `@iqai/mcp-{name}`
-- Tool names: snake_case
-- Use FastMCP for simple servers, raw MCP SDK for complex ones.
-- Validate env vars with Zod schemas.
-- Keep tools thin — business logic goes in services/.
-```
+- **Biome** for formatting and linting (not ESLint/Prettier).
+- **pnpm** as package manager.
+- **Vitest** for testing. Test behavior, not implementation. Colocate test files.
+- **Prisma** as ORM. PostgreSQL in production, SQLite for local dev.
+- **Changesets** for versioning in published packages.
 
 ## Git
 
-```markdown
-## Git
+Conventional commits: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`.
 
-- Conventional commits: feat, fix, docs, refactor, chore, test.
-- Branch naming: feat/description, fix/description, docs/description.
 ```
+feat(auth): add social login with Google
+fix(api): handle null response from external service
+```
+
+Rules: lowercase, no period, under 72 chars, imperative mood ("add" not "added").
+
+Branch naming: `feat/short-description`, `fix/short-description`.
