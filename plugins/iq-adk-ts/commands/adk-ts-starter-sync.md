@@ -102,9 +102,9 @@ npx @iqai/adk-cli web
 
 - [ADK-TS Documentation](https://adk.iqai.com/)
 - [ADK-TS CLI Documentation](https://adk.iqai.com/docs/cli)
-- [GitHub Repository](https://github.com/IQAIcom/adk-ts)
-- [ADK-TS Sample Projects](https://github.com/IQAIcom/adk-ts-samples)
-- [GitHub Discussions](https://github.com/IQAIcom/adk-ts/discussions)
+- [GitHub Repository](https://github.com/IQOfficial/adk-ts)
+- [ADK-TS Sample Projects](https://github.com/IQOfficial/adk-ts-samples)
+- [GitHub Discussions](https://github.com/IQOfficial/adk-ts/discussions)
 - [Telegram Community](https://t.me/+Z37x8uf6DLE3ZTQ8)
 ```
 
@@ -113,7 +113,7 @@ npx @iqai/adk-cli web
 ```markdown
 ## 🤝 Contributing
 
-This [template](https://github.com/IQAIcom/adk-ts/tree/main/apps/starter-templates/{TEMPLATE_NAME}) is open source and contributions are welcome! Feel free to:
+This [template](https://github.com/IQOfficial/adk-ts/tree/main/apps/starter-templates/{TEMPLATE_NAME}) is open source and contributions are welcome! Feel free to:
 
 - Report bugs or suggest improvements
 - Add new agent examples
@@ -141,7 +141,7 @@ Compare each shared section across all templates. Report:
 
 For each drifted section, propose the canonical version that should be used across all templates. Follow these rules:
 
-- GitHub URL org: always `IQAIcom` (not `IQAICOM`)
+- GitHub URL org: always `IQOfficial` (not `IQOfficial`)
 - Node.js version: `>=22.0` (not `18+`)
 - Docs URL: `https://adk.iqai.com/`
 - Use "ADK-TS" not bare "ADK" in prose

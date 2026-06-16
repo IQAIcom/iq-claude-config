@@ -31,7 +31,7 @@ Your job is to review documentation for quality, accuracy, brand consistency, an
 
 ### URLs & Links
 
-- GitHub org casing: `IQAIcom` (not `IQAICOM`) — exception: Telegram `https://t.me/IQAICOM` is correct
+- GitHub org casing: `IQOfficial` (not `IQOfficial`) — exception: Telegram `https://t.me/IQOfficial` is correct
 - All canonical URLs match: docs site, GitHub, Discussions, Telegram, NPM, Samples
 - Internal doc links (`/docs/...`) point to pages that actually exist
 - No broken external links (check hrefs against known patterns)
@@ -56,7 +56,7 @@ Your job is to review documentation for quality, accuracy, brand consistency, an
 - Logo width is 80 (consistent across all READMEs)
 - NPM badges present only for published packages (root + packages)
 - Node.js version is `>=22.0` (not `18+`)
-- GitHub URLs use `IQAIcom` casing
+- GitHub URLs use `IQOfficial` casing
 
 ### For Starter Template READMEs
 

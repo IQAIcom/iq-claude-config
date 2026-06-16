@@ -10,19 +10,19 @@ Search across all `.md` and `.mdx` files for:
 
 - **Bare "ADK" usage**: Find instances where "ADK" appears without the "-TS" suffix. Exclude package names like `@iqai/adk` and CLI commands like `adk run` — focus on prose/description text that says "ADK" when it should say "ADK-TS". Common false positives to skip: `@iqai/adk`, `adk-cli`, `adk run`, `adk web`, `adk-ts` (lowercase in URLs), `ADK-TS`.
 - **"Agent Development Kit" expansion**: This phrase should never appear. Search for it.
-- **GitHub org casing**: Search for `IQAICOM` (uppercase) in URLs — canonical is `IQAIcom`. Exception: `https://t.me/IQAICOM` is correct for Telegram.
+- **GitHub org casing**: Search for `IQOfficial` (uppercase) in URLs — canonical is `IQOfficial`. Exception: `https://t.me/IQOfficial` is correct for Telegram.
 - **Tagline consistency**: Where the tagline appears, verify it matches "The TypeScript-Native AI Agent Framework".
 
 ### 2. URL Consistency
 
 Verify canonical URLs are used correctly:
 
-- GitHub repo: `https://github.com/IQAIcom/adk-ts`
-- GitHub Discussions: `https://github.com/IQAIcom/adk-ts/discussions`
-- Telegram: `https://t.me/IQAICOM`
+- GitHub repo: `https://github.com/IQOfficial/adk-ts`
+- GitHub Discussions: `https://github.com/IQOfficial/adk-ts/discussions`
+- Telegram: `https://t.me/IQOfficial`
 - Documentation: `https://adk.iqai.com/`
 - NPM: `https://www.npmjs.com/package/@iqai/adk`
-- Samples: `https://github.com/IQAIcom/adk-ts-samples`
+- Samples: `https://github.com/IQOfficial/adk-ts-samples`
 
 Flag any variations or broken URLs.
 

@@ -79,13 +79,13 @@ Generate a developer-friendly release summary suitable for GitHub Releases, blog
 
 ## Full Changelog
 
-See the [full changelog](https://github.com/IQAIcom/adk-ts/blob/main/packages/adk/CHANGELOG.md) for all changes.
+See the [full changelog](https://github.com/IQOfficial/adk-ts/blob/main/packages/adk/CHANGELOG.md) for all changes.
 
 ---
 
 **Get started:** `pnpm add @iqai/adk@{VERSION}`
 
-📖 [Documentation](https://adk.iqai.com/) | 💬 [Discussions](https://github.com/IQAIcom/adk-ts/discussions) | 🛠️ [IQ Builders Telegram](https://t.me/+Z37x8uf6DLE3ZTQ8) | 📱 [IQ AI Telegram](https://t.me/IQAICOM)
+📖 [Documentation](https://adk.iqai.com/) | 💬 [Discussions](https://github.com/IQOfficial/adk-ts/discussions) | 🛠️ [IQ Builders Telegram](https://t.me/+Z37x8uf6DLE3ZTQ8) | 📱 [IQ AI Telegram](https://t.me/IQOfficial)
 ```
 
 ## Terminology Rules

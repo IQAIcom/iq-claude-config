@@ -49,11 +49,11 @@ This skill creates and updates README files that match the exact branded pattern
     <a href="https://www.npmjs.com/package/@iqai/adk">
       <img src="https://img.shields.io/npm/dm/@iqai/adk" alt="NPM Downloads" />
     </a>
-    <a href="https://github.com/IQAIcom/adk-ts/blob/main/LICENSE.md">
+    <a href="https://github.com/IQOfficial/adk-ts/blob/main/LICENSE.md">
       <img src="https://img.shields.io/npm/l/@iqai/adk" alt="License" />
     </a>
-    <a href="https://github.com/IQAIcom/adk-ts">
-      <img src="https://img.shields.io/github/stars/IQAIcom/adk-ts?style=social" alt="GitHub Stars" />
+    <a href="https://github.com/IQOfficial/adk-ts">
+      <img src="https://img.shields.io/github/stars/IQOfficial/adk-ts?style=social" alt="GitHub Stars" />
     </a>
   </p>
 </div>
@@ -115,11 +115,11 @@ This skill creates and updates README files that match the exact branded pattern
     <a href="https://www.npmjs.com/package/{NPM_PACKAGE}">
       <img src="https://img.shields.io/npm/dm/{NPM_PACKAGE}" alt="NPM Downloads" />
     </a>
-    <a href="https://github.com/IQAIcom/adk-ts/blob/main/LICENSE.md">
+    <a href="https://github.com/IQOfficial/adk-ts/blob/main/LICENSE.md">
       <img src="https://img.shields.io/npm/l/{NPM_PACKAGE}" alt="License" />
     </a>
-    <a href="https://github.com/IQAIcom/adk-ts">
-      <img src="https://img.shields.io/github/stars/IQAIcom/adk-ts?style=social" alt="GitHub Stars" />
+    <a href="https://github.com/IQOfficial/adk-ts">
+      <img src="https://img.shields.io/github/stars/IQOfficial/adk-ts?style=social" alt="GitHub Stars" />
     </a>
   </p>
 </div>
@@ -330,14 +330,14 @@ npx @iqai/adk-cli web
 
 - [ADK-TS Documentation](https://adk.iqai.com/)
 - [ADK-TS CLI Documentation](https://adk.iqai.com/docs/cli)
-- [GitHub Repository](https://github.com/IQAIcom/adk-ts)
-- [ADK-TS Sample Projects](https://github.com/IQAIcom/adk-ts-samples)
-- [GitHub Discussions](https://github.com/IQAIcom/adk-ts/discussions)
+- [GitHub Repository](https://github.com/IQOfficial/adk-ts)
+- [ADK-TS Sample Projects](https://github.com/IQOfficial/adk-ts-samples)
+- [GitHub Discussions](https://github.com/IQOfficial/adk-ts/discussions)
 - [Telegram Community](https://t.me/+Z37x8uf6DLE3ZTQ8)
 
 ## 🤝 Contributing
 
-This [template](https://github.com/IQAIcom/adk-ts/tree/main/apps/starter-templates/{TEMPLATE_NAME}) is open source and contributions are welcome! Feel free to:
+This [template](https://github.com/IQOfficial/adk-ts/tree/main/apps/starter-templates/{TEMPLATE_NAME}) is open source and contributions are welcome! Feel free to:
 
 - Report bugs or suggest improvements
 - Add new agent examples
@@ -382,12 +382,12 @@ When updating any of these shared sections, update ALL starter templates. Use `/
 
 All READMEs must follow these rules (from `adk-style-guide`):
 
-- GitHub URL org: `IQAIcom` (not `IQAICOM`)
+- GitHub URL org: `IQOfficial` (not `IQOfficial`)
 - Node.js version: `>=22.0`
 - Docs URL: `https://adk.iqai.com/`
 - Logo: `https://files.catbox.moe/vumztw.png`
-- GitHub Discussions: `https://github.com/IQAIcom/adk-ts/discussions`
+- GitHub Discussions: `https://github.com/IQOfficial/adk-ts/discussions`
 - Telegram: `https://t.me/+Z37x8uf6DLE3ZTQ8`
-- Samples: `https://github.com/IQAIcom/adk-ts-samples`
+- Samples: `https://github.com/IQOfficial/adk-ts-samples`
 - Always "ADK-TS" never bare "ADK"
 - Never expand to "Agent Development Kit"

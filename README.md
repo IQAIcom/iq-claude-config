@@ -16,7 +16,7 @@ Modular Claude Code plugins for IQ development. Install only what your project n
 Run these inside a Claude Code session:
 
 ```
-/plugin marketplace add IQAIcom/iq-claude-config
+/plugin marketplace add IQOfficial/iq-claude-config
 ```
 
 Then install the plugin(s) you need:

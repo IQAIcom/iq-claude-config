@@ -153,18 +153,18 @@ Use these exact URLs everywhere — no variations:
 
 | Resource                        | URL                                             |
 | ------------------------------- | ----------------------------------------------- |
-| GitHub repo                     | `https://github.com/IQAIcom/adk-ts`             |
-| GitHub Discussions              | `https://github.com/IQAIcom/adk-ts/discussions` |
+| GitHub repo                     | `https://github.com/IQOfficial/adk-ts`             |
+| GitHub Discussions              | `https://github.com/IQOfficial/adk-ts/discussions` |
 | Telegram (ADK-TS / IQ Builders) | `https://t.me/+Z37x8uf6DLE3ZTQ8`                |
-| Telegram (IQ AI company)        | `https://t.me/IQAICOM`                          |
+| Telegram (IQ AI company)        | `https://t.me/IQOfficial`                          |
 | Documentation site              | `https://adk.iqai.com/`                         |
 | NPM package                     | `https://www.npmjs.com/package/@iqai/adk`       |
-| Sample projects                 | `https://github.com/IQAIcom/adk-ts-samples`     |
+| Sample projects                 | `https://github.com/IQOfficial/adk-ts-samples`     |
 | Logo image                      | `https://files.catbox.moe/vumztw.png`           |
 
-**Telegram link usage:** Use the ADK-TS / IQ Builders link (`+Z37x8uf6DLE3ZTQ8`) in framework docs, READMEs, and developer-facing content. Use the IQ AI company link (`IQAICOM`) only for company-level references (e.g., SECURITY.md).
+**Telegram link usage:** Use the ADK-TS / IQ Builders link (`+Z37x8uf6DLE3ZTQ8`) in framework docs, READMEs, and developer-facing content. Use the IQ AI company link (`IQOfficial`) only for company-level references (e.g., SECURITY.md).
 
-**GitHub org casing:** Always `IQAIcom` (NOT `IQAICOM` or `iqaicom`)
+**GitHub org casing:** Always `IQOfficial` (NOT `IQOfficial` or `iqofficial`)
 
 ### Internal Doc Links
 
@@ -189,7 +189,7 @@ When reviewing any content, verify:
 - [ ] Uses "ADK-TS" not bare "ADK"
 - [ ] Never expands to "Agent Development Kit"
 - [ ] CLI referenced as "ADK-TS CLI"
-- [ ] GitHub URLs use `IQAIcom` casing
+- [ ] GitHub URLs use `IQOfficial` casing
 - [ ] Node.js version is `>=22.0`
 - [ ] Code examples use TypeScript with `@iqai/adk` imports
 - [ ] Model names are current (not deprecated)
