@@ -7,8 +7,8 @@
     "email": "dev@iq.wiki"
   },
   "skills": [
-    "./skills/nestjs/SKILL.md",
-    "./skills/database/SKILL.md",
-    "./skills/testing/SKILL.md"
+    "./skills/nestjs",
+    "./skills/database",
+    "./skills/testing"
   ]
 }

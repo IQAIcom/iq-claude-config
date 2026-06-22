@@ -7,9 +7,9 @@
     "email": "dev@iq.wiki"
   },
   "skills": [
-    "./skills/adk-ts-docs-writer/SKILL.md",
-    "./skills/adk-ts-readme-writer/SKILL.md",
-    "./skills/adk-ts-style-guide/SKILL.md"
+    "./skills/adk-ts-docs-writer",
+    "./skills/adk-ts-readme-writer",
+    "./skills/adk-ts-style-guide"
   ],
   "agents": [
     "./agents/docs-freshness-checker.md",

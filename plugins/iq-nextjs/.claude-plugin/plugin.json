@@ -7,12 +7,12 @@
     "email": "dev@iq.wiki"
   },
   "skills": [
-    "./skills/nextjs/SKILL.md",
-    "./skills/design/SKILL.md",
-    "./skills/database/SKILL.md",
-    "./skills/auth/SKILL.md",
-    "./skills/iq-gateway/SKILL.md",
-    "./skills/testing/SKILL.md",
-    "./skills/agent-browser/SKILL.md"
+    "./skills/nextjs",
+    "./skills/design",
+    "./skills/database",
+    "./skills/auth",
+    "./skills/iq-gateway",
+    "./skills/testing",
+    "./skills/agent-browser"
   ]
 }

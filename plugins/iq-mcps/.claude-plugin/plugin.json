@@ -7,6 +7,6 @@
     "email": "dev@iq.wiki"
   },
   "skills": [
-    "./skills/mcp-development/SKILL.md"
+    "./skills/mcp-development"
   ]
 }
